@@ -1,8 +1,8 @@
-package service
+package Service
 
 import (
-	"./Models"
 	"github.com/h2non/bimg"
+	"image-service/Models"
 	"io"
 	"strings"
 )

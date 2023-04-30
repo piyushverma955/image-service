@@ -1,11 +1,11 @@
-package controller
+package Controller
 
 import (
-	"./Models"
-	"./service"
 	"bytes"
 	"fmt"
 	"github.com/go-playground/validator/v10"
+	"image-service/Models"
+	"image-service/Service"
 	"net/http"
 	"strconv"
 	"time"
@@ -17,7 +17,7 @@ func ConvertImage(w http.ResponseWriter, req *http.Request) {
 		sendErrorMessage(w, http.StatusBadRequest, err)
 		return
 	}
-	resp, err := service.ConvertImage(body)
+	resp, err := Service.ConvertImage(body)
 	if err != nil {
 		sendErrorMessage(w, http.StatusBadRequest, err)
 		return
